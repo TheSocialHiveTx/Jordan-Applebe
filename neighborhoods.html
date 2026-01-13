@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhoods - Jordan Applebe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Pinyon+Script&display=swap"
+        rel="stylesheet">
+    <style>
+        .font-signature {
+            font-family: 'Pinyon Script', cursive;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-sans {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .h-serif {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+        <div
+            class="bg-[#BD1015] text-white py-2 px-4 text-[10px] md:text-xs flex justify-between items-center tracking-[0.1em] font-medium uppercase">
+            <div class="flex gap-6">
+                <a href="tel:7134926278" class="hover:opacity-80 flex items-center gap-2 transition-opacity">
+                    <span>(713) 492-6278</span>
+                </a>
+                <a href="mailto:jordanapplebe@outlook.com" class="hover:opacity-80 hidden md:inline transition-opacity">
+                    jordanapplebe@outlook.com
+                </a>
+            </div>
+            <div class="flex gap-4">
+                <a href="contact.html" class="hover:opacity-80 font-bold border-b border-white/30">Request Consult</a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex flex-col group">
+                    <span
+                        class="font-signature text-4xl text-gray-900 -mb-2 group-hover:text-[#BD1015] transition-colors">Jordan
+                        Applebe</span>
+                    <span class="text-[10px] tracking-[0.25em] uppercase font-bold text-[#BD1015] mt-1">Houston REALTOR®
+                        | KW Clear Lake</span>
+                </a>
+
+                <div class="hidden lg:flex space-x-8">
+                    <a href="index.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">Home</a>
+                    <a href="buy.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">Buy</a>
+                    <a href="sell.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">Sell</a>
+                    <a href="neighborhoods.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-[#BD1015] border-b-2 border-[#BD1015]">Neighborhoods</a>
+                    <a href="about.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">About</a>
+                    <a href="resources.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">Resources</a>
+                    <a href="contact.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">Contact</a>
+                </div>
+
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-[#BD1015] focus:outline-none">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path id="menu-icon-open" fill-rule="evenodd"
+                                d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z" />
+                            <path id="menu-icon-close" class="hidden" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 pb-4">
+            <a href="index.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">Home</a>
+            <a href="buy.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">Buy</a>
+            <a href="sell.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">Sell</a>
+            <a href="neighborhoods.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-[#BD1015] bg-gray-50">Neighborhoods</a>
+            <a href="about.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">About</a>
+            <a href="resources.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">Resources</a>
+            <a href="contact.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">Contact</a>
+            <div class="px-6 pt-2">
+                <a href="contact.html"
+                    class="block w-full text-center bg-[#BD1015] text-white py-4 rounded font-bold uppercase tracking-widest text-xs">
+                    Get Home Value
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="pt-32 bg-white pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 uppercase leading-none">Houston & <br /><span
+                        class="text-[#BD1015]">Bay Area</span> Guides</h1>
+                <p class="text-gray-600 max-w-2xl text-lg mt-4">Exploring the distinct personalities, price ranges, and
+                    lifestyles of our local communities.</p>
+            </div>
+
+            <div class="space-y-24">
+                <!-- Clear Lake -->
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2 group relative">
+                        <div
+                            class="absolute inset-0 bg-[#BD1015] transform translate-x-4 translate-y-4 rounded-lg z-0 transition-transform group-hover:translate-x-6 group-hover:translate-y-6">
+                        </div>
+                        <img src="https://picsum.photos/id/122/800/600" alt="Clear Lake"
+                            class="w-full h-[400px] object-cover rounded-lg shadow-xl relative z-10" />
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 uppercase">Clear Lake</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">The heart of Houston's Bay Area, known for
+                            waterfront living and aerospace industry roots.</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-[#BD1015]">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Best For</h4>
+                                <p class="text-sm font-semibold">NASA employees, boaters, and families.</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-gray-900">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Commute Note
+                                </h4>
+                                <p class="text-sm font-semibold">30-40 mins to Downtown via I-45, 10 mins to Kemah.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-3">Lifestyle
+                                Highlights</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Waterfront
+                                    Parks</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">NASA
+                                    Johnson Space Center</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Excellent
+                                    Schools</span>
+                            </div>
+                        </div>
+
+                        <a href="contact.html"
+                            class="inline-block bg-[#BD1015] text-white px-8 py-3 rounded font-bold hover:bg-black transition-all uppercase tracking-widest text-sm">
+                            Get Listings in Clear Lake
+                        </a>
+                    </div>
+                </div>
+
+                <!-- League City (Reversed) -->
+                <div class="flex flex-col lg:flex-row gap-12 items-center lg:flex-row-reverse">
+                    <div class="lg:w-1/2 group relative">
+                        <div
+                            class="absolute inset-0 bg-[#BD1015] transform translate-x-4 translate-y-4 rounded-lg z-0 transition-transform group-hover:translate-x-6 group-hover:translate-y-6">
+                        </div>
+                        <img src="https://picsum.photos/id/124/800/600" alt="League City"
+                            class="w-full h-[400px] object-cover rounded-lg shadow-xl relative z-10" />
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 uppercase">League City</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">A rapidly growing family-centric community
+                            with historic charm and modern amenities.</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-[#BD1015]">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Best For</h4>
+                                <p class="text-sm font-semibold">Commuters and young families.</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-gray-900">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Commute Note
+                                </h4>
+                                <p class="text-sm font-semibold">Right on the I-45 corridor midway between Houston and
+                                    Galveston.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-3">Lifestyle
+                                Highlights</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Historic
+                                    District</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Big
+                                    League Dreams</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Top-rated
+                                    CCISD Schools</span>
+                            </div>
+                        </div>
+
+                        <a href="contact.html"
+                            class="inline-block bg-[#BD1015] text-white px-8 py-3 rounded font-bold hover:bg-black transition-all uppercase tracking-widest text-sm">
+                            Get Listings in League City
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Friendswood -->
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2 group relative">
+                        <div
+                            class="absolute inset-0 bg-[#BD1015] transform translate-x-4 translate-y-4 rounded-lg z-0 transition-transform group-hover:translate-x-6 group-hover:translate-y-6">
+                        </div>
+                        <img src="https://picsum.photos/id/132/800/600" alt="Friendswood"
+                            class="w-full h-[400px] object-cover rounded-lg shadow-xl relative z-10" />
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 uppercase">Friendswood</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">Consistently ranked as one of the safest
+                            cities with a strong sense of community.</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-[#BD1015]">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Best For</h4>
+                                <p class="text-sm font-semibold">Families prioritizing luxury and safety.</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-gray-900">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Commute Note
+                                </h4>
+                                <p class="text-sm font-semibold">Easy access to Pearland and Clear Lake.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-3">Lifestyle
+                                Highlights</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Large
+                                    Lots</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Quaker
+                                    Heritage</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Elite
+                                    School District</span>
+                            </div>
+                        </div>
+
+                        <a href="contact.html"
+                            class="inline-block bg-[#BD1015] text-white px-8 py-3 rounded font-bold hover:bg-black transition-all uppercase tracking-widest text-sm">
+                            Get Listings in Friendswood
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pearland (Reversed) -->
+                <div class="flex flex-col lg:flex-row gap-12 items-center lg:flex-row-reverse">
+                    <div class="lg:w-1/2 group relative">
+                        <div
+                            class="absolute inset-0 bg-[#BD1015] transform translate-x-4 translate-y-4 rounded-lg z-0 transition-transform group-hover:translate-x-6 group-hover:translate-y-6">
+                        </div>
+                        <img src="https://picsum.photos/id/145/800/600" alt="Pearland"
+                            class="w-full h-[400px] object-cover rounded-lg shadow-xl relative z-10" />
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 uppercase">Pearland</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">A diverse, thriving suburb with some of
+                            the best shopping and dining in the region.</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-[#BD1015]">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Best For</h4>
+                                <p class="text-sm font-semibold">Diverse professionals and retail lovers.</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-gray-900">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Commute Note
+                                </h4>
+                                <p class="text-sm font-semibold">Quick 20-minute jump to the Medical Center via Hwy 288.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-3">Lifestyle
+                                Highlights</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Town
+                                    Center</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Srilankan
+                                    Temple</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Shadow
+                                    Creek Ranch</span>
+                            </div>
+                        </div>
+
+                        <a href="contact.html"
+                            class="inline-block bg-[#BD1015] text-white px-8 py-3 rounded font-bold hover:bg-black transition-all uppercase tracking-widest text-sm">
+                            Get Listings in Pearland
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Pasadena -->
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2 group relative">
+                        <div
+                            class="absolute inset-0 bg-[#BD1015] transform translate-x-4 translate-y-4 rounded-lg z-0 transition-transform group-hover:translate-x-6 group-hover:translate-y-6">
+                        </div>
+                        <img src="https://picsum.photos/id/160/800/600" alt="Pasadena"
+                            class="w-full h-[400px] object-cover rounded-lg shadow-xl relative z-10" />
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 uppercase">Pasadena</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">Affordable living with deep roots in the
+                            industrial and petrochemical sector.</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-[#BD1015]">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Best For</h4>
+                                <p class="text-sm font-semibold">Industrial workers and first-time buyers.</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-gray-900">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Commute Note
+                                </h4>
+                                <p class="text-sm font-semibold">Direct access to the Ship Channel and East Beltway.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-3">Lifestyle
+                                Highlights</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Strawberry
+                                    Festival</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">San
+                                    Jacinto Monument</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Affordable
+                                    Housing</span>
+                            </div>
+                        </div>
+
+                        <a href="contact.html"
+                            class="inline-block bg-[#BD1015] text-white px-8 py-3 rounded font-bold hover:bg-black transition-all uppercase tracking-widest text-sm">
+                            Get Listings in Pasadena
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Heights / Midtown (Reversed) -->
+                <div class="flex flex-col lg:flex-row gap-12 items-center lg:flex-row-reverse">
+                    <div class="lg:w-1/2 group relative">
+                        <div
+                            class="absolute inset-0 bg-[#BD1015] transform translate-x-4 translate-y-4 rounded-lg z-0 transition-transform group-hover:translate-x-6 group-hover:translate-y-6">
+                        </div>
+                        <img src="https://picsum.photos/id/180/800/600" alt="The Heights / Midtown"
+                            class="w-full h-[400px] object-cover rounded-lg shadow-xl relative z-10" />
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-4 uppercase">The Heights / Midtown</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">Walkable urban living with historic
+                            bungalows and trendy nightlife.</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-[#BD1015]">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Best For</h4>
+                                <p class="text-sm font-semibold">Young professionals and urbanites.</p>
+                            </div>
+                            <div class="bg-gray-50 p-6 rounded border-l-4 border-gray-900">
+                                <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-2">Commute Note
+                                </h4>
+                                <p class="text-sm font-semibold">5-10 mins to Downtown, very central.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h4 class="font-bold text-xs uppercase tracking-widest text-gray-400 mb-3">Lifestyle
+                                Highlights</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">19th
+                                    Street Shopping</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">White
+                                    Oak Drive</span>
+                                <span
+                                    class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs font-bold text-gray-600 shadow-sm">Biking
+                                    Trails</span>
+                            </div>
+                        </div>
+
+                        <a href="contact.html"
+                            class="inline-block bg-[#BD1015] text-white px-8 py-3 rounded font-bold hover:bg-black transition-all uppercase tracking-widest text-sm">
+                            Get Listings in The Heights / Midtown
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-32 text-center bg-gray-900 text-white p-16 rounded-lg">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Don't see your neighborhood?</h2>
+                <p class="text-gray-400 mb-10 max-w-xl mx-auto">I serve the entire Greater Houston area including EaDo,
+                    Midtown, Sugar Land, and beyond. Contact me for a custom guide.</p>
+                <a href="contact.html"
+                    class="bg-white text-black px-10 py-4 rounded font-bold hover:bg-[#BD1015] hover:text-white transition-all uppercase">
+                    Request Custom Neighborhood Guide
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h2 class="font-signature text-3xl mb-4">Jordan Applebe</h2>
+                <p class="text-gray-400 text-sm mb-6">
+                    Providing expert real estate services across the Greater Houston area, specializing in Clear Lake
+                    and the Bay Area.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/JordanApplebeRealtor" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        Facebook
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold mb-4 uppercase tracking-wider text-[#BD1015]">Contact</h3>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li>📍 18050 Saturn Ln. Suite 100, Houston, TX 77058</li>
+                    <li>📞 <a href="tel:7134926278" class="hover:text-white">(713) 492-6278</a></li>
+                    <li>✉️ <a href="mailto:jordanapplebe@outlook.com"
+                            class="hover:text-white">jordanapplebe@outlook.com</a></li>
+                    <li>🏢 Keller Williams Realty Clear Lake</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold mb-4 uppercase tracking-wider text-[#BD1015]">Compliance</h3>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li>
+                        <a href="https://www.har.com/mhf/terms/dispBrokerInfo?sitetype=aws&cid=817307" target="_blank"
+                            rel="noopener noreferrer" class="hover:text-white underline">
+                            Texas Real Estate Commission Brokerage Information (HAR)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-2.pdf" target="_blank"
+                            rel="noopener noreferrer" class="hover:text-white underline">
+                            TREC Consumer Protection Notice
+                        </a>
+                    </li>
+                    <li class="mt-4 flex items-center gap-2">
+                        <span class="text-[10px] border border-gray-600 px-1">REALTOR®</span>
+                        <span class="text-[10px] border border-gray-600 px-1">EQUAL HOUSING OPPORTUNITY</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+            <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> Jordan Applebe. All rights reserved. Licensed
+                Realtor in the State of Texas.
+            </p>
+            <p class="mt-2">Real Estate website designed with expertise in Houston Market Realities.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-icon-open');
+        const closeIcon = document.getElementById('menu-icon-close');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            if (isOpen) {
+                mobileMenu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            } else {
+                mobileMenu.classList.remove('hidden');
+                openIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>

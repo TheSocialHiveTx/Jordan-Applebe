@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jordan Applebe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Pinyon+Script&display=swap"
+        rel="stylesheet">
+    <style>
+        .font-signature {
+            font-family: 'Pinyon Script', cursive;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-sans {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .h-serif {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+        <div
+            class="bg-[#BD1015] text-white py-2 px-4 text-[10px] md:text-xs flex justify-between items-center tracking-[0.1em] font-medium uppercase">
+            <div class="flex gap-6">
+                <a href="tel:7134926278" class="hover:opacity-80 flex items-center gap-2 transition-opacity">
+                    <span>(713) 492-6278</span>
+                </a>
+                <a href="mailto:jordanapplebe@outlook.com" class="hover:opacity-80 hidden md:inline transition-opacity">
+                    jordanapplebe@outlook.com
+                </a>
+            </div>
+            <div class="flex gap-4">
+                <a href="contact.html" class="hover:opacity-80 font-bold border-b border-white/30">Request Consult</a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex flex-col group">
+                    <span
+                        class="font-signature text-4xl text-gray-900 -mb-2 group-hover:text-[#BD1015] transition-colors">Jordan
+                        Applebe</span>
+                    <span class="text-[10px] tracking-[0.25em] uppercase font-bold text-[#BD1015] mt-1">Houston REALTOR®
+                        | KW Clear Lake</span>
+                </a>
+
+                <div class="hidden lg:flex space-x-8">
+                    <a href="index.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">Home</a>
+                    <a href="buy.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">Buy</a>
+                    <a href="sell.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">Sell</a>
+                    <a href="neighborhoods.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">Neighborhoods</a>
+                    <a href="about.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">About</a>
+                    <a href="resources.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-gray-600 hover:text-[#BD1015]">Resources</a>
+                    <a href="contact.html"
+                        class="text-[13px] uppercase tracking-[0.1em] font-bold transition-all text-[#BD1015] border-b-2 border-[#BD1015]">Contact</a>
+                </div>
+
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-[#BD1015] focus:outline-none">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path id="menu-icon-open" fill-rule="evenodd"
+                                d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z" />
+                            <path id="menu-icon-close" class="hidden" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 pb-4">
+            <a href="index.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">Home</a>
+            <a href="buy.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">Buy</a>
+            <a href="sell.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">Sell</a>
+            <a href="neighborhoods.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">Neighborhoods</a>
+            <a href="about.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">About</a>
+            <a href="resources.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 hover:text-[#BD1015]">Resources</a>
+            <a href="contact.html"
+                class="block px-6 py-4 text-sm font-bold uppercase tracking-widest text-[#BD1015] bg-gray-50">Contact</a>
+            <div class="px-6 pt-2">
+                <a href="contact.html"
+                    class="block w-full text-center bg-[#BD1015] text-white py-4 rounded font-bold uppercase tracking-widest text-xs">
+                    Get Home Value
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="pt-32 bg-gray-50 pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 uppercase">Let's <span
+                        class="text-[#BD1015]">Connect</span></h1>
+                <p class="text-gray-600 max-w-2xl text-lg">Whether you have a quick question or are ready to list, I'm
+                    just a call or click away.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-1 space-y-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 border-gray-900">
+                        <h3 class="text-lg font-bold mb-4 uppercase tracking-widest text-[#BD1015]">Direct Contact</h3>
+                        <div class="space-y-4">
+                            <a href="tel:7134926278"
+                                class="flex items-center gap-3 text-gray-700 hover:text-[#BD1015] transition-colors group">
+                                <span
+                                    class="bg-gray-100 p-3 rounded group-hover:bg-[#BD1015] group-hover:text-white">📞</span>
+                                <span class="font-bold">(713) 492-6278</span>
+                            </a>
+                            <a href="mailto:jordanapplebe@outlook.com"
+                                class="flex items-center gap-3 text-gray-700 hover:text-[#BD1015] transition-colors group">
+                                <span
+                                    class="bg-gray-100 p-3 rounded group-hover:bg-[#BD1015] group-hover:text-white">✉️</span>
+                                <span class="font-bold break-all">jordanapplebe@outlook.com</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 border-gray-900">
+                        <h3 class="text-lg font-bold mb-4 uppercase tracking-widest text-[#BD1015]">Office Location</h3>
+                        <div class="flex items-start gap-3 text-gray-700 mb-6">
+                            <span class="bg-gray-100 p-3 rounded shrink-0">📍</span>
+                            <span class="font-bold">18050 Saturn Ln. Suite 100,<br /> Houston, TX 77058</span>
+                        </div>
+                        <div class="w-full h-48 rounded overflow-hidden">
+                            <iframe title="Office Location" width="100%" height="100%" frameborder="0" scrolling="no"
+                                marginheight="0" marginwidth="0"
+                                src="https://maps.google.com/maps?q=18050%20Saturn%20Ln.%20Suite%20100,%20Houston,%20TX%2077058&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 border-[#BD1015]">
+                        <h3 class="text-lg font-bold mb-4 uppercase tracking-widest">Business Hours</h3>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex justify-between"><span>Monday - Friday</span> <span>8:00 AM - 7:00 PM</span>
+                            </li>
+                            <li class="flex justify-between"><span>Saturday</span> <span>10:00 AM - 4:00 PM</span></li>
+                            <li class="flex justify-between"><span>Sunday</span> <span>By Appointment</span></li>
+                        </ul>
+                        <p class="mt-4 text-xs text-gray-400 italic">Available via call/text 24/7 for urgent matters.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <!-- LeadForm (General) -->
+                    <div class="lead-form-container bg-white p-10 shadow-2xl border-t-[6px] border-[#BD1015]">
+                        <h3 class="text-2xl font-serif font-bold mb-2 text-gray-900">How can I help you today?</h3>
+                        <p class="text-gray-400 mb-8 text-sm font-light leading-relaxed">Fill out the form below and
+                            I'll get back to you as soon as possible.</p>
+
+                        <form class="space-y-6 lead-form">
+                            <input type="hidden" name="type" value="general">
+                            <div class="space-y-1">
+                                <label class="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Full
+                                    Name</label>
+                                <input type="text" required
+                                    class="w-full border-b border-gray-200 p-3 bg-gray-50 focus:bg-white focus:border-[#BD1015] outline-none transition-all text-sm font-medium"
+                                    placeholder="John Smith" />
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Email
+                                        Address</label>
+                                    <input type="email" required
+                                        class="w-full border-b border-gray-200 p-3 bg-gray-50 focus:bg-white focus:border-[#BD1015] outline-none transition-all text-sm font-medium"
+                                        placeholder="smith@example.com" />
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Phone</label>
+                                    <input type="tel" required
+                                        class="w-full border-b border-gray-200 p-3 bg-gray-50 focus:bg-white focus:border-[#BD1015] outline-none transition-all text-sm font-medium"
+                                        placeholder="(713) 555-0100" />
+                                </div>
+                            </div>
+
+                            <div class="space-y-1">
+                                <label class="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Goal
+                                    Timeframe</label>
+                                <div class="relative">
+                                    <select
+                                        class="w-full border-b border-gray-200 p-3 bg-gray-50 focus:bg-white focus:border-[#BD1015] outline-none transition-all text-sm font-medium appearance-none">
+                                        <option value="">Select an option...</option>
+                                        <option value="immediate">ASAP / Immediate</option>
+                                        <option value="1-3-months">1-3 Months</option>
+                                        <option value="3-6-months">3-6 Months</option>
+                                        <option value="just-browsing">Just Researching</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="space-y-1">
+                                <label
+                                    class="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Message
+                                    / Goals</label>
+                                <textarea rows="3"
+                                    class="w-full border-b border-gray-200 p-3 bg-gray-50 focus:bg-white focus:border-[#BD1015] outline-none transition-all text-sm font-medium"
+                                    placeholder="Share your primary objectives..."></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-[#BD1015] text-white py-5 rounded-sm font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-black transition-all transform hover:-translate-y-1 shadow-lg">
+                                Submit Consultation Request
+                            </button>
+                        </form>
+
+                        <div class="hidden success-message bg-white p-12 shadow-2xl text-center">
+                            <div class="text-[#BD1015] text-6xl mb-6 font-serif italic">✓</div>
+                            <h3 class="text-2xl font-serif font-bold mb-4">Request Received</h3>
+                            <p class="text-gray-500 font-light leading-relaxed">Jordan will review your information and
+                                contact you within one business day.</p>
+                            <button
+                                class="reset-form-btn mt-10 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 hover:text-[#BD1015] transition-colors">
+                                Submit New Request
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h2 class="font-signature text-3xl mb-4">Jordan Applebe</h2>
+                <p class="text-gray-400 text-sm mb-6">
+                    Providing expert real estate services across the Greater Houston area, specializing in Clear Lake
+                    and the Bay Area.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/JordanApplebeRealtor" target="_blank" rel="noopener noreferrer"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        Facebook
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold mb-4 uppercase tracking-wider text-[#BD1015]">Contact</h3>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li>📍 18050 Saturn Ln. Suite 100, Houston, TX 77058</li>
+                    <li>📞 <a href="tel:7134926278" class="hover:text-white">(713) 492-6278</a></li>
+                    <li>✉️ <a href="mailto:jordanapplebe@outlook.com"
+                            class="hover:text-white">jordanapplebe@outlook.com</a></li>
+                    <li>🏢 Keller Williams Realty Clear Lake</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-bold mb-4 uppercase tracking-wider text-[#BD1015]">Compliance</h3>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li>
+                        <a href="https://www.har.com/mhf/terms/dispBrokerInfo?sitetype=aws&cid=817307" target="_blank"
+                            rel="noopener noreferrer" class="hover:text-white underline">
+                            Texas Real Estate Commission Brokerage Information (HAR)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-2.pdf" target="_blank"
+                            rel="noopener noreferrer" class="hover:text-white underline">
+                            TREC Consumer Protection Notice
+                        </a>
+                    </li>
+                    <li class="mt-4 flex items-center gap-2">
+                        <span class="text-[10px] border border-gray-600 px-1">REALTOR®</span>
+                        <span class="text-[10px] border border-gray-600 px-1">EQUAL HOUSING OPPORTUNITY</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+            <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> Jordan Applebe. All rights reserved. Licensed
+                Realtor in the State of Texas.
+            </p>
+            <p class="mt-2">Real Estate website designed with expertise in Houston Market Realities.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-icon-open');
+        const closeIcon = document.getElementById('menu-icon-close');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            if (isOpen) {
+                mobileMenu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            } else {
+                mobileMenu.classList.remove('hidden');
+                openIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            }
+        });
+
+        // Form handling
+        const forms = document.querySelectorAll('.lead-form');
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const container = form.closest('.lead-form-container');
+                const successMsg = container.querySelector('.success-message');
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+            });
+        });
+
+        const resetBtns = document.querySelectorAll('.reset-form-btn');
+        resetBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const container = btn.closest('.lead-form-container');
+                const form = container.querySelector('.lead-form');
+                const successMsg = container.querySelector('.success-message');
+                successMsg.classList.add('hidden');
+                form.classList.remove('hidden');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+
+</html>
