@@ -1,0 +1,7 @@
+{
+  "name": "Jordan Applebe - Houston Realtor",
+  "description": "Professional real estate platform for Jordan Applebe, specializing in Houston and the Clear Lake area. Features neighborhood guides, lead generation funnels, and Houston-specific resources like flood awareness and property tax guides.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
