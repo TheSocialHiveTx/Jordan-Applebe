@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!img.complete) {
             img.style.opacity = '0';
             img.addEventListener('load', function () {
-                this.style.transition = 'opacity 0.3s ease';
+                this.style.transition = 'opacity 0.5s ease';
                 this.style.opacity = '1';
             });
         }
