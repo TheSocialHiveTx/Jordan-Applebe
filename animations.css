@@ -1,0 +1,439 @@
+/* ===================================
+   DYNAMIC UI/UX ENHANCEMENTS
+   Quick Win Animations & Effects
+   =================================== */
+
+/* Smooth Page Load Fade-In */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar Animations */
+nav {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Hero Section Stagger Animation */
+.overflow-x-hidden section:first-child h1 {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.overflow-x-hidden section:first-child p {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.overflow-x-hidden section:first-child .flex.flex-wrap {
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.overflow-x-hidden section:first-child .lead-form-container {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+/* Floating Animation for CTA Buttons */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+a[href*="buy.html"]:hover,
+a[href*="sell.html"]:hover,
+a[href*="contact.html"]:hover {
+    animation: float 0.6s ease-in-out;
+}
+
+/* Pulse Effect for Important Elements */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Smooth Hover Scale for Cards */
+.group:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease-out;
+}
+
+/* Shimmer Effect for Images on Hover */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.group:hover img {
+    position: relative;
+}
+
+.group:hover img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    animation: shimmer 1.5s;
+}
+
+/* Smooth Scroll Reveal for Sections */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Trust Strip Animation */
+.grid.grid-cols-2.md\:grid-cols-4 > div {
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.grid.grid-cols-2.md\:grid-cols-4 > div:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.grid.grid-cols-2.md\:grid-cols-4 > div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.grid.grid-cols-2.md\:grid-cols-4 > div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.grid.grid-cols-2.md\:grid-cols-4 > div:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Testimonial Cards Hover Effect */
+.bg-gray-50.p-10 {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bg-gray-50.p-10:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Input Focus Effects */
+input:focus,
+textarea:focus,
+select:focus {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(189, 16, 21, 0.15);
+}
+
+/* Button Ripple Effect */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+button:active::after,
+a[class*="bg-"]:active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 0.6s ease-out;
+}
+
+button,
+a[class*="bg-"] {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Smooth Color Transitions */
+* {
+    transition-property: color, background-color, border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+/* Parallax Effect for Hero Background */
+@media (prefers-reduced-motion: no-preference) {
+    .absolute.inset-0 img {
+        transition: transform 0.1s ease-out;
+    }
+}
+
+/* Glow Effect on Hover for Brand Colors */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(189, 16, 21, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(189, 16, 21, 0.8), 0 0 30px rgba(189, 16, 21, 0.6);
+    }
+}
+
+.bg-\[\#BD1015\]:hover {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Smooth Underline Animation for Links */
+a[class*="text-"] {
+    position: relative;
+}
+
+a[class*="text-"]::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #BD1015;
+    transition: width 0.3s ease;
+}
+
+a[class*="text-"]:hover::after {
+    width: 100%;
+}
+
+/* Stagger Animation for Neighborhood Cards */
+.grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > a {
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > a:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > a:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > a:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > a:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > a:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > a:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* Smooth Rotation for Icons/Numbers */
+.font-serif.text-3xl.font-black.italic {
+    transition: transform 0.3s ease;
+}
+
+.flex.gap-6:hover .font-serif.text-3xl.font-black.italic {
+    transform: rotate(360deg);
+}
+
+/* Bounce Effect for Mobile Menu Icon */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+#mobile-menu-btn:hover svg {
+    animation: bounce 0.5s ease;
+}
+
+/* Gradient Animation for Background */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Smooth Opacity Transitions */
+.opacity-0,
+.opacity-10,
+.opacity-80,
+.opacity-90 {
+    transition: opacity 0.5s ease;
+}
+
+/* Loading State Animation */
+@keyframes skeleton {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+/* Cursor Pointer Enhancement */
+a, button, [role="button"] {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth Border Transitions */
+.border,
+.border-t,
+.border-b,
+.border-l,
+.border-r {
+    transition: border-color 0.3s ease, border-width 0.3s ease;
+}
+
+/* Enhanced Focus States for Accessibility */
+*:focus-visible {
+    outline: 2px solid #BD1015;
+    outline-offset: 2px;
+    transition: outline 0.2s ease;
+}
+
+/* Smooth Shadow Transitions */
+.shadow,
+.shadow-sm,
+.shadow-lg,
+.shadow-2xl {
+    transition: box-shadow 0.3s ease;
+}
+
+/* Magnetic Button Effect */
+@media (hover: hover) {
+    button:hover,
+    a[class*="bg-"]:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Smooth Transform Transitions */
+.transform {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Intersection Observer Reveal (requires JS) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth Page Transitions */
+body {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Enhanced Hover States for Navigation */
+nav a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    transform: translateY(-1px);
+}
+
+/* Typewriter Effect for Headings (Optional Enhancement) */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Smooth Gradient Backgrounds */
+.bg-gradient-to-r,
+.bg-gradient-to-t {
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease;
+}
+
+.bg-gradient-to-r:hover,
+.bg-gradient-to-t:hover {
+    background-position: right center;
+}
