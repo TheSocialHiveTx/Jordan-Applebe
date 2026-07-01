@@ -47,8 +47,8 @@
                 <a href="tel:7134926278" class="hover:opacity-80 flex items-center gap-2 transition-opacity">
                     <span>(713) 492-6278</span>
                 </a>
-                <a href="mailto:jordanapplebe@outlook.com" class="hover:opacity-80 hidden md:inline transition-opacity">
-                    jordanapplebe@outlook.com
+                <a href="contact.html" class="hover:opacity-80 hidden md:inline transition-opacity">
+                    Contact
                 </a>
             </div>
             <div class="flex gap-4">
@@ -154,12 +154,12 @@
                         <p class="text-gray-400 mb-8 text-sm font-light leading-relaxed">Find out what your Houston area
                             home is worth in today's market.</p>
 
-                        <form class="space-y-6 lead-form">
+                        <form action="https://formspree.io/f/mbdvzkkz" method="POST" class="space-y-6 lead-form">
                             <input type="hidden" name="type" value="seller">
                             <div class="space-y-1">
                                 <label class="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Full
                                     Name</label>
-                                <input type="text" required
+                                <input type="text" name="name" required
                                     class="w-full border-b border-gray-200 p-3 bg-gray-50 focus:bg-white focus:border-[#BD1015] outline-none transition-all text-sm font-medium"
                                     placeholder="John Smith" />
                             </div>
@@ -169,14 +169,14 @@
                                     <label
                                         class="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Email
                                         Address</label>
-                                    <input type="email" required
+                                    <input type="email" name="email" required
                                         class="w-full border-b border-gray-200 p-3 bg-gray-50 focus:bg-white focus:border-[#BD1015] outline-none transition-all text-sm font-medium"
-                                        placeholder="smith@example.com" />
+                                        placeholder="Your details" />
                                 </div>
                                 <div class="space-y-1">
                                     <label
                                         class="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Phone</label>
-                                    <input type="tel" required
+                                    <input type="tel" name="phone" required
                                         class="w-full border-b border-gray-200 p-3 bg-gray-50 focus:bg-white focus:border-[#BD1015] outline-none transition-all text-sm font-medium"
                                         placeholder="(713) 555-0100" />
                                 </div>
@@ -196,7 +196,7 @@
                                 <label class="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Goal
                                     Timeframe</label>
                                 <div class="relative">
-                                    <select
+                                    <select name="timeframe"
                                         class="w-full border-b border-gray-200 p-3 bg-gray-50 focus:bg-white focus:border-[#BD1015] outline-none transition-all text-sm font-medium appearance-none">
                                         <option value="">Select an option...</option>
                                         <option value="immediate">ASAP / Immediate</option>
@@ -211,7 +211,7 @@
                                 <label
                                     class="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Message
                                     / Goals</label>
-                                <textarea rows="3"
+                                <textarea rows="3" name="message"
                                     class="w-full border-b border-gray-200 p-3 bg-gray-50 focus:bg-white focus:border-[#BD1015] outline-none transition-all text-sm font-medium"
                                     placeholder="Share your primary objectives..."></textarea>
                             </div>
@@ -317,8 +317,7 @@
                 <ul class="space-y-3 text-sm text-gray-400">
                     <li>📍 18050 Saturn Ln. Suite 100, Houston, TX 77058</li>
                     <li>📞 <a href="tel:7134926278" class="hover:text-white">(713) 492-6278</a></li>
-                    <li>✉️ <a href="mailto:jordanapplebe@outlook.com"
-                            class="hover:text-white">jordanapplebe@outlook.com</a></li>
+                    <li>✉️ <a href="contact.html" class="hover:text-white">Request Consult</a></li>
                     <li>🏢 Keller Williams Realty Clear Lake</li>
                 </ul>
             </div>
@@ -379,12 +378,35 @@
         // Form handling
         const forms = document.querySelectorAll('.lead-form');
         forms.forEach(form => {
-            form.addEventListener('submit', (e) => {
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const container = form.closest('.lead-form-container');
                 const successMsg = container.querySelector('.success-message');
-                form.classList.add('hidden');
-                successMsg.classList.remove('hidden');
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: form.method || 'POST',
+                        headers: { 'Accept': 'application/json' },
+                        body: new FormData(form)
+                    });
+
+                    if (response.ok) {
+                        form.classList.add('hidden');
+                        successMsg.classList.remove('hidden');
+                    } else {
+                        throw new Error('Submission failed');
+                    }
+                } catch (error) {
+                    alert('There was a problem submitting your request. Please try again.');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
             });
         });
 
